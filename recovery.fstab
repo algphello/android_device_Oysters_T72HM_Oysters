@@ -1,0 +1,19 @@
+# mount point	fstype    device    	[device2]
+
+/boot		emmc	/dev/bootimg	flags=display="boot";backup=1
+/logo		emmc	/dev/logo	flags=display="logo";backup=1;flashimg=1
+/misc		emmc	/dev/misc	flags=display="misc";backup=0
+/nvram		emmc	/dev/nvram	flags=display="nvram";backup=1;flashimg=1
+/protect_f	emmc	/emmc@protect_f	flags=display="protect_f";backup=1
+/protect_s	emmc	/emmc@protect_s	flags=display="protect_s";backup=1
+/recovery	emmc	/dev/recovery	flags=display="recovery";backup=1
+/uboot		emmc	/dev/uboot	flags=display="uboot";backup=1;flashimg=1
+/resv		emmc	/dev/resv	flags=display="resv";backup=1
+/cota		emmc	/emmc@cota	flags=display="cota";backup=1
+/system		ext4	/emmc@android
+/system_image	emmc	/emmc@android
+/cache		ext4	/emmc@cache
+/data		ext4	/emmc@usrdata
+/data_image	emmc	/emmc@usrdata	flags=backup=1
+/external_sd	auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="External SD";storage;wipeingui;removable;backup=0;settingsstorage
+/usbotg		auto	/dev/block/sda1		/dev/block/sda		flags=display="USB-OTG";storage;removable;backup=0
